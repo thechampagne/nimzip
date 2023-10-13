@@ -10,6 +10,22 @@ Nim binding for a portable, simple **zip** library.
 nimble install nimzip
 ```
 
+### Example
+```nim
+import nimzip
+
+when isMainModule:
+  var zip = zip_open("/tmp/nim.zip", 6, 'w')
+      
+  discard zip_entry_open(zip, "test")
+      
+  let content: cstring = "test content"
+  discard zip_entry_write(zip, content, csize_t(len(content)))
+
+  discard zip_entry_close(zip)
+  zip_close(zip)
+```
+
 ### References
  - [zip](https://github.com/kuba--/zip)
 
