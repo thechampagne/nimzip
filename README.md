@@ -4,6 +4,12 @@
 
 Nim binding for a portable, simple **zip** library.
 
+### Download
+
+```
+nimble install nimzip
+```
+
 ### References
  - [zip](https://github.com/kuba--/zip)
 
